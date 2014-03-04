@@ -1,0 +1,22 @@
+get_filename_component(shared_dir ${CMAKE_CURRENT_LIST_FILE} PATH)
+
+include_directories(${shared_dir}/net)
+include_directories(${shared_dir}/util)
+include_directories(${shared_dir}/serial)
+include_directories(${shared_dir}/world)
+include_directories(${shared_dir}/intel)
+include_directories(${shared_dir}/planning)
+
+set (SHARED_SRCS
+	${shared_dir}/net/netraw.cpp
+	${shared_dir}/net/robocup_ssl_client.cpp
+	${shared_dir}/net/refboxReceiver.cpp
+	${shared_dir}/serial/serialSender.cpp
+	${shared_dir}/world/blackboard.cpp
+	${shared_dir}/world/objects.cpp
+	${shared_dir}/intel/intel.cpp
+	${shared_dir}/planning/planning.cpp	
+)
+
+set (SHARED_HEADERS
+)
